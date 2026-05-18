@@ -5,13 +5,13 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start -p ${PORT:-3000}"
   },
   "dependencies": {
     "mongoose": "^7.5.0",
-    "next": "13.5.6",
+    "next": "^13.5.11",
+    "next-auth": "^4.22.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "next-auth": "^4.22.1"
+    "react-dom": "18.2.0"
   }
 }
