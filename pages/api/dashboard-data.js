@@ -1,6 +1,7 @@
 const { connect } = require('../../lib/db');
 const Provider = require('../../models/Provider');
 const Lead = require('../../models/Lead');
+const Service = require('../../models/Service');
 
 export default async function handler(req, res) {
   try {
