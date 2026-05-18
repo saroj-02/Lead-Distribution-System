@@ -79,7 +79,7 @@ export default function Dashboard(){
             <div>
               <strong className="muted">Assigned leads</strong>
               <ul style={{marginTop:8}}>
-                {(p.leads||[]).slice(-5).map(l=> (
+                {(p.leads||[]).map(l=> (
                   <li key={l._id} style={{marginBottom:12}}>
                     <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',gap:8}}>
                       <div>
