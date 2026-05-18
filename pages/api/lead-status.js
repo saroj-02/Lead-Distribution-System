@@ -18,6 +18,7 @@ export default async function handler(req, res) {
     if (!lead) return res.status(404).json({ error: 'Lead not found' });
 
     lead.status = status;
+    lead.isActive = status !== 'closed';
     lead.statusHistory.push({ status, changedAt: new Date(), note: note || `${status.charAt(0).toUpperCase() + status.slice(1)} by provider` });
     lead.updatedAt = new Date();
     await lead.save();
