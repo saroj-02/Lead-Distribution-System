@@ -42,9 +42,10 @@ function Header(){
         {session ? (
           <>
             <div style={{fontSize:12,color:'#cbd5e1'}}>Hi, {session.user?.name || session.user?.email}</div>
-            <button className="role-btn" onClick={() => {
+            <button className="role-btn" onClick={async () => {
               try{ localStorage.removeItem('pw_auth_role'); }catch(e){}
-              signOut({ callbackUrl: '/' });
+              await signOut({ redirect: false });
+              window.location.href = '/auth';
             }}>Logout</button>
           </>
         ) : null}
